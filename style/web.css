@@ -1,0 +1,333 @@
+:root {
+    /* Variables */
+    /* Dark colors*/
+    --main-dark-dark-color: #263238;
+    --main-dark-medium-color: #37474f;
+    --main-dark-light-color: #576a73;
+    /* Medium colors*/
+    --main-medium-dark-color: #546e7a;
+    --main-medium-medium-color: #607d8b;
+    --main-medium-light-color: #78909c;
+    /* Light colors*/
+    --main-light-dark-color: #b0bec5;
+    --main-light-medium-color: #cfd8dc;
+    --main-light-light-color: #eceff1;
+}
+
+@font-face {
+    font-family: "SFText Regular";
+    src: url(../fonts/SFUIText-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SFText Bold";
+    src: url(../fonts/SFUIText-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SFText Italic";
+    src: url(../fonts/SFUIText-RegularItalic.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "SFText Regular", sans-serif;
+    background-color: var(--main-light-light-color);
+}
+
+/* LOGIN & REGISTER */
+
+.login,
+.register {
+    margin: 0;
+    padding: 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: auto;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--main-medium-light-color);
+    color: var(--main-dark-dark-color);
+}
+
+.login .form-group,
+.register .form-group {
+    padding-top: 4vh;
+}
+
+.login .form-group label,
+.register .form-group label {
+    font-family: "SFText Italic";
+    padding-left: 1vw;
+}
+
+.login .form-group input,
+.register .form-group input {
+    width: 100%;
+    margin-top: 0.5vw;
+    background-color: var(--main-light-dark-color);
+    color: var(--main-dark-medium-color);
+    border: none;
+    padding: 1vw;
+    font-size: 1.7rem;
+    font-family: "SFText Bold", sans-serif;
+    border-radius: 50vw;
+}
+
+.login .form-group input::placeholder,
+.register .form-group input::placeholder {
+    color: var(--main-medium-medium-color);
+}
+
+.login .form-group+input,
+.register .form-group+input {
+    color: var(--main-light-light-color);
+    background-color: var(--main-dark-medium-color);
+    border: none;
+    margin-top: 2vw;
+    margin-left: 1vw;
+    padding: 0.5vw 1vw;
+}
+
+.login form a,
+.register form a {
+    margin-left: 1vw;
+    padding: 0.5vw 1vw;
+    color: var(--main-dark-medium-color);
+    background-color: var(--main-medium-medium-color);
+    text-decoration: none;
+    font-family: "SFText Bold";
+}
+
+/* OVERZICHT */
+
+/* Nav */
+header {
+    background-color: var(--main-light-dark-color);
+    width: 100vw;
+    /* Drop Shadow */
+    position: relative;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+header>nav>div {
+    padding: 1vh 3vw;
+    height: 10vh;
+    float: left;
+}
+
+/* LOGO */
+header .logo {
+    width: 10%;
+    text-align: center;
+}
+
+header .logo img {
+    height: 100%;
+}
+
+/* SEARCH */
+header .search {
+    width: 70%;
+}
+
+header .searchContainer {
+    height: 4vh;
+    width: 40%;
+    margin: 2vh 0;
+    border-radius: 50vh;
+    background-color: var(--main-light-medium-color);
+}
+
+header .search input {
+    height: 100%;
+    width: 90%;
+    font-size: 1.7rem;
+    color: var(--main-medium-light-color);
+    padding: 0 0.5vw;
+    background-color: transparent;
+    border: 0;
+}
+
+header .search input::placeholder {
+    color: var(--main-medium-light-color);
+}
+
+header .search input:focus {
+    outline: none;
+}
+
+header .search i {
+    color: var(--main-medium-light-color);
+    width: 10%;
+    text-align: center;
+}
+
+/* USER */
+header .user {
+    width: 20%;
+    color: var(--main-medium-medium-color);
+    font-family: "SFText Bold", sans-serif;
+    font-size: 1.35rem;
+    line-height: 200%;
+    padding: 2vh 3vh;
+}
+
+header .userContainer {
+    float: left;
+}
+
+header .user p {
+    height: 6vh;
+    display: inline-block;
+    padding-right: 1vw;
+}
+
+header .user span {
+    width: 20%;
+    color: var(--main-dark-medium-color);
+    font-family: "SFText Bold", sans-serif;
+    font-size: 2rem;
+    line-height: 150%;
+    text-transform: capitalize;
+}
+
+header .user i {
+    padding: 1vh 0 1vh 2.5vw;
+    font-size: 4vh;
+}
+
+/* main */
+/* columns */
+.col {
+    float: left;
+}
+
+.row:after {
+    /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* categories */
+.col.categories {
+    text-align: center;
+    background-color: var(--main-light-medium-color);
+    width: 4%;
+    height: 90vh;
+}
+
+.col.categories p {
+    font-size: 1rem;
+    font-family: "SFText Bold", sans-serif;
+    color: var(--main-light-light-color);
+    background-color: var(--main-dark-medium-color);
+    padding: 10px 0;
+}
+
+.col.categories i {
+    padding: 35% 0;
+    font-size: 4rem;
+    color: var(--main-dark-medium-color);
+}
+
+/* content */
+.col.content {
+    width: 76%;
+    height: 90vh;
+}
+
+/* chat */
+.col.chat {
+    background-color: var(--main-dark-dark-color);
+    width: 20%;
+    height: 90vh;
+    position: relative;
+}
+
+.col.chat input {
+    background-color: var(--main-dark-light-color);
+    color: var(--main-light-dark-color);
+    border: 0;
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.col.chat input:focus {
+    outline: 0;
+}
+
+.col.chat input::placeholder {
+    color: var(--main-light-dark-color);
+}
+
+.chat #chat-wrap {
+    font-family: "SFText Regular", sans-serif;
+    color: var(--main-light-medium-color);
+}
+
+.chat #chat-area {
+    height: 90vh;
+    overflow: scroll;
+    padding-bottom: 5vh;
+}
+
+#chat-area .chat_msg.other_msg {
+    margin: 1vh 1vw;
+    padding: 2% 4%;
+    max-width: 70%;
+    height: auto;
+    border-radius: 15px 15px 15px 0;
+
+    background-color: var(--main-light-medium-color);
+    color: var(--main-dark-medium-color);
+}
+
+#chat-area .chat_msg {
+    clear: both;
+}
+
+#chat-area .chat_msg.own_msg {
+    margin: 1vh 1vw;
+    padding: 2% 4%;
+    max-width: 70%;
+    height: auto;
+    border-radius: 15px 15px 0 15px;
+
+    background-color: var(--main-medium-medium-color);
+    color: var(--main-dark-dark-color);
+
+    float: right;
+}
+
+#chat-area .msg_uname {
+    font-family: "SFText Italic", sans-serif;
+    color: var(--main-medium-light-color);
+    font-size: 1rem;
+}
+
+#chat-area .own_msg .msg_uname {
+    color: var(--main-light-dark-color);
+}
+
+#chat-area .msg_text {
+    font-family: "SFText Bold", sans-serif;
+    font-size: 2rem;
+}
